@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="OJPRT4">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COMPANY" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BRANCH" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="TODAY" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="TIME" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="USER" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEG-CUST" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="END-CUST" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEG-DATE" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="END-DATE" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="BEG-NUM" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="END-NUM" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="BEG-TYPE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="END-TYPE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEG-SLSID" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="END-SLSID" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEG-STAT" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEG-INSDATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="END-INSDATE" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="JOBS" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="REGION" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="REGION-ID" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="JOB" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="JOB-WHSE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-NUM" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="JOB-DATE" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="JOB-CUSTID" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-INITIALS" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="JOB-SLSREP" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-TYPE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-INSTALLDTE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-LINES" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="JOB-LINE" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="JOB-LNNUM" maxOccurs="unbounded" type="xs:byte"/>
+																			<xs:element name="JOB-STYLE" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="JOB-COLOR" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="JOB-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+																			<xs:element name="JOB-QTYASS" maxOccurs="unbounded" type="xs:decimal"/>
+																			<xs:element name="JOB-STATUS" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="JOB-LINE" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="ROLL" minOccurs="0" maxOccurs="unbounded">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element name="ROLL-INFO" maxOccurs="unbounded">
+																										<xs:complexType>
+																											<xs:sequence>
+																												<xs:element name="ROLL-NUM" maxOccurs="unbounded" type="xs:string"/>
+																												<xs:element name="ROLL-DYE" maxOccurs="unbounded" type="xs:string"/>
+																												<xs:element name="ROLL-TYPESEQ" maxOccurs="unbounded">
+																													<xs:complexType/>
+																												</xs:element>
+																												<xs:element name="ROLL-RESERVED" maxOccurs="unbounded" type="xs:decimal"/>
+																												<xs:element name="ROLL-BARCODE" maxOccurs="unbounded" type="xs:string"/>
+																											</xs:sequence>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MATERIAL-TOTALS" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="REPORT-TOTAL" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="MAT-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TAX-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

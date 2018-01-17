@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="SSPPRT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TITLE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="COMPANY" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="PRINTED-LABEL" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TIME-USER" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SPECIAL-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BRANCH" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SPECIAL-PRICE-LINE" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BRANCH-ID" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CUST-ID" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CUST-TYPE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="PRODCODE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="STYLE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="COLOR" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="LEVEL" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="SUB-TYPE" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BEG-DATE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="END-DATE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="PRICE" maxOccurs="unbounded" type="xs:decimal"/>
+													<xs:element name="COST" maxOccurs="unbounded" type="xs:decimal"/>
+													<xs:element name="USE-CAT-COST" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

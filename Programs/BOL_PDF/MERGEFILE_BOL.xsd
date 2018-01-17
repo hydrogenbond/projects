@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="T12_BOX2-UNIT"/>
+	<xs:element name="BOLRM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LOGO-INFO" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LOGO-LOC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LOGO-POS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LOGO-HEIGHT" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="USER-INFO" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="USER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="DATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="TIME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="TITLE" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BLOCK1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ORDER-NUM-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ORDER-NUM" maxOccurs="unbounded" type="xs:int"/>
+										<xs:element name="ORDERBY-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ORDERBY" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="CUSTID-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CUSTID" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ORDDATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ORDDATE" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BLOCK2" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="INSDAY" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="INSDATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="INSDATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="INSNAME-T" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="INSNAME" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BLOCK3" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BLOCK3-1-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="WO-NUM-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="WO-NUM" maxOccurs="unbounded" type="xs:short"/>
+										<xs:element name="REV-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="REV" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="INSTIME-T" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="INSTIME" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BOX1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BOX1-HEADER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BOX1-DATA" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BOX1-NAME-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-NAME" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ADD1-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ADD1" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ADD2-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ADD2" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX1-CITY-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-CITY" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ZIP-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-ZIP" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX1-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX1-PHONE-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX1-PHONE" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BOX2" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BOX2-HEADER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BOX2-DATA" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CODE-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CODE" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="CONTACT-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CONTACT" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX2-NAME-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-NAME" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-ADD1-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-ADD1" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-BLDG-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-BLDG" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX2-UNIT" maxOccurs="unbounded" type="T12_BOX2-UNIT"/>
+													<xs:element name="BOX2-CITY-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-CITY" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-ZIP-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX2-ZIP" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX2-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX2-UNIT" maxOccurs="unbounded" type="T12_BOX2-UNIT"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BLOCK4" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BLOCK4-1-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BLOCK4-1" maxOccurs="unbounded" type="xs:int"/>
+										<xs:element name="BLOCK4-1B" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="BLOCK4-2-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BLOCK4-2" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="BLOCK4-2B" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="SECTION-FREIGHT-TERMS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BLOCK4-5-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BLOCK4-5" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BLOCK5" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BLOCK5-6" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CONOTES" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CONOTE" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SEP-SHEET-FLAG" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BOX3" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BOX3-HEADER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BOX3-DATA" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BOX3-NAME-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-NAME" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ADD1-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ADD1" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ADD2-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ADD2" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX3-CITY-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-CITY" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ZIP-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-ZIP" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX3-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX3-PHONE-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX3-PHONE" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BOX4" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BOX4-HEADER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BOX4-DATA" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BOX4-CODE-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-SHCODE" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="BOX4-NAME-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-NAME" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-CONTACT" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX4-ADD1-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-ADD1" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-ADD2-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-ADD2" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX4-BLDG-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-BLDG" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="BOX4-CITY-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-CITY" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-ZIP-T" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-ZIP" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX4-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="BOX4-PHONE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BOX4-CONTACT-T" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MATERIAL-HEADER" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MAT-TITLE-HEADER" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="MAT-LINE-HEADER" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="MAT-PC-HEADER" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="MAT-STYLE-HEADER" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="MAT-QTY-HEADER" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MATERIAL" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MATERIAL-LINE" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="MAT-COMMENT-LINE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="TEMP-LINE" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="MAT-PC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-PC-DESC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-STYLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="MAT-UNIT" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-COLOR-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-COLOR" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-STYLE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-STYLE-NUM" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-COLOR-NUM-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MAT-COLOR-NUM" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="ROLL-LINES" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ROLL" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ROLL-NUM-T" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-NUM" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="DYE-T" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="DYE" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="DYE-SEQ-T" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="DYE-SEQ" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-BEG-QTY-T" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-BEG-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-INV-WHSE-T" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-INV-WHSE" maxOccurs="unbounded" type="xs:byte"/>
+																<xs:element name="ROLL-BIN-T" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-BIN" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-STAGED-T" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-STAGED" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-SHPNOW-T" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-SHPNOW" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:sequence minOccurs="0">
+																	<xs:element name="ROLL-PIECE-T" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="ROLL-PIECE" maxOccurs="unbounded" type="xs:decimal"/>
+																	<xs:element name="ROLL-PIECE-TOT-T" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="ROLL-PIECE-TOT" maxOccurs="unbounded" type="xs:decimal"/>
+																	<xs:element name="ROLL-PIECE-SHIP-T" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="ROLL-PIECE-SHIP" maxOccurs="unbounded" type="xs:decimal"/>
+																</xs:sequence>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="MAT-COMMENT-LINES" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MATERIAL-SUMMARY" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROD-SUMMARY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PROD-TYPE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PROD-TOT" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LABOR-HEADER" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LABOR-HEADER1" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LABOR-HEADER2" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LABOR-HEADER3" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LABOR-HEADER4" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LABOR-HEADER5" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LABOR-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LABOR" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LABOR-LINE" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="LAB-COMMENT-LINE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="NEW-LINE" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="LAB-PC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-PC-DESC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-STYLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="LAB-UNITS" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="LAB-COLOR-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-COLOR" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-STAGED-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-STAGED" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="LAB-SHIPNOW-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-SHIPNOW" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="LAB-RATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-RATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-LINE-TOTAL-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-LINE-TOTAL" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="LAB-INSTALLER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LAB-COMMENT-LINES" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="LAB-COMMENT-HEADER" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="LAB-COMMENT" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="INSTALLER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="INS-INFO" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MULTI-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MULTI-HEADER-INFO" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="MULTI-DATA" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SHIPPING-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FROM-NAME" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="FROM-ADD1" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="FROM-ADD2" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="FROM-CITY" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="FROM-ZIP" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="FROM-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="FROM-PHONE1" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="FROM-PHONE2" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TO-NAME" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TO-ADD1" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TO-ADD2" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="TO-CITY" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TO-ZIP" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="TO-COUNTRY" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="TO-PHONE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TO-CODE" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="TO-CONTACT" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="ORDER" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="ORDER-DATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="ORDER-PO" maxOccurs="unbounded" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LABELS-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LABEL" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LABEL-LNNUM" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="LABEL-PC" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:sequence minOccurs="0">
+											<xs:element name="LABEL-PC-FRCLASS" maxOccurs="unbounded" type="xs:byte"/>
+											<xs:element name="LABEL-SIZE" maxOccurs="unbounded" type="xs:string"/>
+										</xs:sequence>
+										<xs:element name="LABEL-PCDESC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-STYNUM" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-COLNUM" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="LABEL-STYLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-WQTY" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="LABEL-WUNITS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-COLOR" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-INSTR" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="LABEL-JSTAT" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LABEL-JSTATDESC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ROLL-LINE-WEIGHT" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="LABEL-ROLL-INFO" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="LABEL-ROLL" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ROLL-ROLLNUM" maxOccurs="unbounded" type="xs:short"/>
+																<xs:element name="ROLL-DYE" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-TYPE" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-CUT-INFO" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-CUT-A" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-CUT-B" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-CUT-B-LA" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-CUT-C" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-WHSE" maxOccurs="unbounded" type="xs:byte"/>
+																<xs:element name="ROLL-LOC" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-SHIP-A" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-SHIP-B" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-PO" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-LEV" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-VEND" maxOccurs="unbounded">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element name="ROLL-UNIT-BYBOX-LA" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-UNIT-BYBOX" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-TOTBOX" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-TOTBOX-LA" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-BOXSHIP" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="ROLL-BOXSHIP-LA" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-Q-WEIGHT" maxOccurs="unbounded" type="xs:decimal"/>
+																<xs:element name="LABEL-BARCODE" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-SIZE" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="ROLL-QTYAMT" minOccurs="0" maxOccurs="unbounded" type="xs:decimal"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TOTAL-WEIGHT" maxOccurs="unbounded" type="xs:decimal"/>
+				<xs:element name="TOTAL-NUM-LABELS" maxOccurs="unbounded" type="xs:byte"/>
+				<xs:element name="TOTAL-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+				<xs:element name="PRODUCT-INFO-TABLE" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NMFC-SUMMARY-H" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NMFC-PIECES-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-TYPE-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-CLASS-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-NMFC-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-SF-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-SY-H" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-LBS-H" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NMFC-SUMMARY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NMFC-SUMMARY-PIECES" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="NMFC-SUMMARY-TYPE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-SUMMARY-CLASS" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="NMFC-SUMMARY-NMFC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-SUMMARY-SF" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="NMFC-SUMMARY-SY" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="NMFC-SUMMARY-LBS" maxOccurs="unbounded" type="xs:byte"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NMFC-FOOTER" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NMFC-FOOTER-PIECES" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="NMFC-FOOTER-TYPE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-FOOTER-CLASS" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="NMFC-FOOTER-NMFC" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="NMFC-FOOTER-SF" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="NMFC-FOOTER-SY" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NMFC-FOOTER-LBS" maxOccurs="unbounded" type="xs:byte"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ALT-BOL-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ALT-BOL-SECTION1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-TITLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ALT-BOL-SUBTITLE" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION2" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION2-CARRIER-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ALT-BOL-SECTION2-CARRIER" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION3" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION3-DISCLAIMER" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION4" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION4-DISCLAIMER" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION5" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION5-SHIPTERMS" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="ALT-BOL-SECTION5-SUBLEVEL" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ALT-BOL-SECTION5-SUBLEVEL-SEP" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ALT-BOL-SECTION5-ORDERBY-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ALT-BOL-SECTION5-ORDERBY" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION6" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION6-RIGHTBLOCK" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION7" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION7-SUBLEVEL" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION8" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION8-SUBLEVEL" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION9" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION9-SUBLEVEL" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION10" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION10-SUBLEVEL" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SECTION10-SUBLEVEL-DEC" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="SECTION10-SUBLEVEL-TOP" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="SECTION10-SUBLEVEL-BOT" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="SECTION10-SUBLEVEL-BR" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION11" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION11-DISCLAIMER" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ALT-BOL-SECTION12" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ALT-BOL-SECTION12-DISCLAIMER" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SECTION-FILL-FORM" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="SECTION-BLANK-FORM" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="SECTION-BLANK-FORM-LINES" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SECTION-BLANK-FORM-LINE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

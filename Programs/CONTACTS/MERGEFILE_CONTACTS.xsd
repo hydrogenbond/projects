@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="CONTACTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LOGO-INFO" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LOGO-LOC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LOGO-POS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="LOGO-HEIGHT" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="FOOTER-INFO" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="HEADER" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PRINTED-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-USER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-DATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-TIME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-DATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-DATE-BEG" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-THRU-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-DATE-END" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-CUST-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-CUST" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-USER-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-USERS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-SALES-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-SALES" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-SORT-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="PRINTED-SORT" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="TITLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ADDED-USER-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ADDED-DATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ADDED-TIME-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CID-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="REP-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="EDIT-USER-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="EDIT-DATE-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="EDIT-TIME-T" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="NOTE-T" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CONTACTS-DATA" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CONTACT-SORT" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PAGE-BREAK" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="SORT-COLUMN" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CONTACT" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CONTACT-KEY" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="CONTACT-CUSTID" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CONTACT-NOTES" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="NOTE" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="NOTE-CUSTID" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="ADDED-USER" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="ADDED-DATE" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="ADDED-TIME" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="EDIT-USER" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="EDIT-DATE" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="EDIT-TIME" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="NOTE" maxOccurs="unbounded" type="xs:string"/>
+																			<xs:element name="REP" maxOccurs="unbounded" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

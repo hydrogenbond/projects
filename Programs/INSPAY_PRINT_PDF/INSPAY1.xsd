@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="INSPAY1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="COMPANY" use="required" type="xs:string"/>
+						<xs:attribute name="SEARCH-BRANCH" use="required" type="xs:byte"/>
+						<xs:attribute name="TIME" use="required" type="xs:string"/>
+						<xs:attribute name="DATE" use="required" type="xs:string"/>
+						<xs:attribute name="USER" use="required" type="xs:string"/>
+						<xs:attribute name="TITLE" use="required" type="xs:string"/>
+						<xs:attribute name="INSTALLER" use="required" type="xs:string"/>
+						<xs:attribute name="INSTALLER-NAME" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LOGO-LOC" maxOccurs="unbounded" type="xs:string"/>
+				<xs:element name="COLUMNS" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BRANCH-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="JOB-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="LINE-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="PC-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="STYLE-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="COLOR-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="QTY-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="RATE-C" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="AMT-SEL-C" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="REPORT-DATA" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BRANCH" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="JOB" maxOccurs="unbounded">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:element name="JOBNUM" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="BRANCH" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="INI-SEQ" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="LNNUM" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="PC" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="STYLE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="COLOR" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOB-QTY" maxOccurs="unbounded" type="xs:decimal"/>
+													<xs:element name="JOB-RATE" maxOccurs="unbounded" type="xs:decimal"/>
+													<xs:element name="JOB-AMT" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="USERID" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="POSTDATE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="MEMO" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="JOBNUM" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="BRANCH" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="INI-SEQ" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="LNNUM" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="PC" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="STYLE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="COLOR" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="JOB-QTY" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="JOB-RATE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="JOB-AMT" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="USERID" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="POSTDATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="MEMO" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BRANCH-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TOTALS" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PAYMENT-TOT" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TOT-TO-PAY" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DEDUCTIONS" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LOAN" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="ARTRADE" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="RETAINAGE" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="WC-T" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="WC" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="TYPE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="GST-LI" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="OTHER" maxOccurs="unbounded" type="xs:decimal"/>
+										<xs:element name="OTH-COMMENT" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

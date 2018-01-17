@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="INSDETJOB">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BEGDATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="BEGDOW" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="ENDDATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="ENDDOW" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="SYSTEMID" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="SYSTEMDATE" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="SYSTEMTIME" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="TITLE" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CITYINFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CITY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CITYNAME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYZIP" maxOccurs="unbounded" type="xs:int"/>
+										<xs:element name="CITYLOC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYBLDG" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYACCUMCODE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYACCUM" maxOccurs="unbounded">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:element name="CITYACCUM-RED" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="CITYRANK" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="CITYCODIV" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="CITYWHSE" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="CITYJOB" maxOccurs="unbounded" type="xs:int"/>
+										<xs:element name="CITYJOBDUP" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYLINE" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="CITYSTYLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYSEQ" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="CITYDATE" maxOccurs="unbounded" type="xs:int"/>
+										<xs:element name="CITYTIME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYCNAME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYSHADD1" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYSHADD2" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYCITYST" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="CITYINSTALLER" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYINSTR" maxOccurs="unbounded">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:element name="CITYINSTR-RED" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="CITYSTATUS" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYTYPE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYQTYNUMERIC" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYQTYDISP" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

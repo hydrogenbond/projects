@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="CITYACCUM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HEADER-INFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BEGDATE" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="BEGDOW" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="ENDDATE" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="ENDDOW" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="SYSTEMID" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="SYSTEMDATE" maxOccurs="unbounded" type="xs:int"/>
+							<xs:element name="SYSTEMTIME" maxOccurs="unbounded" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CITYINFO" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CITY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CITYNAME" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CITYJOBTOT" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="ACCUM-LEVEL" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ACCUM-NAME" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="ACCUM-QTY" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="ACCUM-JOBTOT" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ACCUMLIST" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ACCUMLISTTODISPLAY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ACCUMTODISPLAY" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ACCUMTODISPLAY-QTY" maxOccurs="unbounded" type="xs:short"/>
+										<xs:element name="ACCUMTODISPLAY-JOBS" maxOccurs="unbounded" type="xs:byte"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TOTAL-NUMBER-OF-JOBS" maxOccurs="unbounded" type="xs:byte"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

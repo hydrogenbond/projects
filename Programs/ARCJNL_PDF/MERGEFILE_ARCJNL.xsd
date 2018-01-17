@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="T9_SUB-DATE"/>
+	<xs:element name="ARCJNL">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BRANCH-LEVEL" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="HEADER" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TITLE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="COMPANY" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="DATE" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="BRANCH" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="REG-DATE-LABEL" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="REG-DATE" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="BRANCH-LABEL" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DETAIL" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DETAIL-DATA" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BRANCH" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="PAY-TYPE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="USER" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="DATE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="CUSTOMER" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="SOURCE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="JOBNUM" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="REFERENCE" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="AMOUNT" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="GLACCT" maxOccurs="unbounded" type="xs:int"/>
+													<xs:element name="GLSEQ" maxOccurs="unbounded" type="xs:short"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="TOTALS" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TOTALS-BLOCK" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TOTALS-DATA" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:choice>
+																<xs:sequence>
+																	<xs:element name="SUB-DESC" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="SUB-DATE" maxOccurs="unbounded" type="T9_SUB-DATE"/>
+																	<xs:element name="SUB-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+																</xs:sequence>
+																<xs:sequence>
+																	<xs:element name="DESC" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="DATE" maxOccurs="unbounded">
+																		<xs:complexType/>
+																	</xs:element>
+																	<xs:element name="TOTAL" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:sequence minOccurs="0">
+																		<xs:element name="SUB-DESC" maxOccurs="unbounded" type="xs:string"/>
+																		<xs:element name="SUB-DATE" maxOccurs="unbounded" type="T9_SUB-DATE"/>
+																		<xs:element name="SUB-TOTAL" maxOccurs="unbounded" type="xs:string"/>
+																	</xs:sequence>
+																</xs:sequence>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
